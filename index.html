@@ -77,25 +77,30 @@
             margin: 0 auto;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Cantinho dos Pets</a>
+            <a class="navbar-brand" href="#home">Cantinho dos Pets</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Preços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                    <!-- <li class="nav-item"><a href="#home" class="nav-link">Home</a></li> -->
+                    <li class="nav-item"><a href="#sobre-nós" class="nav-link">Sobre nós</a></li>
+                    <li class="nav-item"><a href="#serviços" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#planos" class="nav-link">Planos</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#feedbacks" class="nav-link">Feedbacks</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
                 <a href="#" class="btn btn-primary d-none d-lg-block">Reserve agora</a>
             </div>
@@ -104,10 +109,11 @@
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
+    <section id="home">
     <div id="carouselExample" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imagens/cat-8.jpg" class="d-block w-100" alt="Gato feliz">
+                <img src="imagens/cat-8.jpg" class="d-block w-100" alt="Gato">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3 bg-dark bg-opacity-50 rounded">
                         <h3 class="text-white d-none d-sm-block">Hospedagem para animais de estimação</h3>
@@ -123,505 +129,434 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Booking Start -->
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <div class="bg-primary text-white p-4 rounded">
-                    <h3 class="text-center mb-4">Agende um Serviço</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="time" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option selected disabled>Seu pet é um...</option>
-                                <option value="1">Cachorro</option>
-                                <option value="2">Gato</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-dark w-100 py-2" type="submit">Reserve agora</button>
-                    </form>
+    <!-- home Start -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="bg-primary text-white p-4 rounded">
+                        <h3 class="text-center mb-4">Agende um Serviço</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" required>
+                                    <option selected disabled>Seu pet é um...</option>
+                                    <option value="1">Cachorro</option>
+                                    <option value="2">Gato</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-dark w-100 py-2" type="submit">Reserve agora</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary">Indo viajar de férias?</h4>
-                <h1>Reserve uma hospedagem para o <span class="text-primary">seu pet!</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dignissimos iure cum in numquam nostrum sit excepturi.</p>
-                <div class="row py-2">
-                    <div class="col-sm-6">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-house" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
-                                <h5 class="m-2">Hotel para Pets</h5>
+                <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
+                    <h4 class="text-secondary">Indo viajar de férias?</h4>
+                    <h1>Reserve uma hospedagem para o <span class="text-primary">seu pet!</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dignissimos iure cum in numquam nostrum sit excepturi.</p>
+                    <div class="row py-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-house" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
+                                    <h5 class="m-2">Hotel para Pets</h5>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-soap" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
-                                <h5 class="m-2">Banho & tosa</h5>
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-soap" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
+                                    <h5 class="m-2">Banho & tosa</h5>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-stethoscope" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
-                                <h5 class="m-2">Consulta Veterinária</h5>
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-stethoscope" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
+                                    <h5 class="m-2">Consulta Veterinária</h5>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-paw" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
-                                <h5 class="m-2">Adestramento</h5>
+                        <div class="col-sm-6">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa-solid fa-paw" style="font-size: 31px; vertical-align: middle; margin-right: 10px;"></i>
+                                    <h5 class="m-2">Adestramento</h5>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam necessitatibus tempora beatae quis, laudantium unde totam doloremque asperiores ratione.</p>
                         </div>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Booking End -->
+    </section>
+    <!-- home End -->
 
     <!-- about start -->
 
-    <div class="container py-3">
-        <div class="row py-5">
-            <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Sobre nós</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Hospedagem</span></h1>
-                <h5 class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam optio nobis laudantium tempore harum, placeat architecto sequi expedita exercitationem qui.</h5>
-                <p class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam optio nobis laudantium tempore harum, placeat architecto sequi expedita exercitationem qui.</p>
-                <ul class="list-inline">
-                    <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Melhor no mercado</h5></li>
-                    <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Serviço de emergência</h5></li>
-                    <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Suporte ao cliente 24h</h5></li>
-                </ul>
-
-                <a href="" class="btn btn-lg btn-primary mt-3 px-4">Saiba mais</a>
-
-            </div>
-
-            <div class="col-lg-5">
-                <div class="row px--3">
-                    <div class="col-12 p-0">
-                        <img src="imagens/dog.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-6 p-0">
-                        <img class="img-fluid" src="imagens/dog-2.jpg" alt="">
-                    </div>
-                    <div class="col-6 p-0">
-                        <img class="img-fluid" src="imagens/cats.jpg" alt="">
+    <section id="sobre-nós">
+        <div class="container py-3">
+            <div class="row py-5">
+                <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
+                    <h4 class="text-secondary mb-3">Sobre nós</h4>
+                    <h1 class="display-4 mb-4"><span class="text-primary">Hospedagem</span></h1>
+                    <h5 class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam optio nobis laudantium tempore harum, placeat architecto sequi expedita exercitationem qui.</h5>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nam optio nobis laudantium tempore harum, placeat architecto sequi expedita exercitationem qui.</p>
+                    <ul class="list-inline">
+                        <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Melhor no mercado</h5></li>
+                        <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Serviço de emergência</h5></li>
+                        <li><h5><i class="fa fa-check-double text-primary mr-3"></i>Suporte ao cliente 24h</h5></li>
+                    </ul>
+                    <a href="" class="btn btn-lg btn-primary mt-3 px-4">Saiba mais</a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row px--3">
+                        <div class="col-12 p-0">
+                            <img src="imagens/dog.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-6 p-0">
+                            <img class="img-fluid" src="imagens/dog-2.jpg" alt="">
+                        </div>
+                        <div class="col-6 p-0">
+                            <img class="img-fluid" src="imagens/cats.jpg" alt="">
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-    </div>
+    </section>
 
     <!-- about end -->
 
     <!-- service start -->
 
-    <div class="container-fluid bg-light pt-5">
-        <div class="container py-5">
-            <div class="d-flex flex-column flex-center mb-5 text-center">
-                <h4 class="text-secondary">Nossos serviços</h4>
-                <h1 class="display-4 m-0">Serviços <span class="text-primary">premium</span></h1>
-            </div>
-
-            <div class="row pb-3">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-house mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Hospedagem</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
+    <section id="serviços">
+        <div class="container-fluid bg-light pt-5">
+            <div class="container py-5">
+                <div class="d-flex flex-column flex-center mb-5 text-center">
+                    <h4 class="text-secondary">Nossos serviços</h4>
+                    <h1 class="display-4 m-0">Serviços <span class="text-primary">premium</span></h1>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-bone mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Alimentação</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-soap mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Banho e tosa</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-cat mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Para gatos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-dog mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Para cachorros</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
-                        <h3><i class="fa-solid fa-syringe mb-4" style="font-size: 3rem;"></i></h3>
-                        <h3 class="mb-3">Vacinação</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
-                        <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- service end -->
-
-    <!-- features start -->
-
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <img src="imagens/pet-care.jpg" class="img-fluid w-100" alt="">
-            </div>
-            <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Por que nos escolher?</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Cuidado especial</span> com animais de estimação</h1>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, quia numquam necessitatibus facilis in asperiores velit nemo sed maiores maxime! Dolor dolore quia velit sit.</p>
-                <div class="row py-2">
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>
-                            <h5 class="text-truncate m-0">Melhor no mercado</h5>
+                <div class="row pb-3">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-house mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Hospedagem</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
                         </div>
-
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Serviço de emergência</h5>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-bone mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Alimentação</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
                         </div>
-
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Cuidado especial</h5>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-soap mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Banho e tosa</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
                         </div>
-
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center mb-4">
-                            <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Suporte ao cliente</h5>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-cat mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Para gatos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
                         </div>
-
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-dog mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Para cachorros</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="d-flex flex-column text-center bg-white mb-2 p-sm-5">
+                            <h3><i class="fa-solid fa-syringe mb-4" style="font-size: 3rem;"></i></h3>
+                            <h3 class="mb-3">Vacinação</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui labore, veritatis iure facere odit reprehenderit velit dolorem saepe veniam.</p>
+                            <a href="" class="text-uppercase font-weight-normal">Saiba mais</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- service end -->
+        <!-- features start -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img src="imagens/pet-care.jpg" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
+                    <h4 class="text-secondary mb-3">Por que nos escolher?</h4>
+                    <h1 class="display-4 mb-4"><span class="text-primary">Cuidado especial</span> com animais de estimação</h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, quia numquam necessitatibus facilis in asperiores velit nemo sed maiores maxime! Dolor dolore quia velit sit.</p>
+                    <div class="row py-2">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>
+                                <h5 class="text-truncate m-0">Melhor no mercado</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Serviço de emergência</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Cuidado especial</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1><i class="fa-regular fa-circle-check" style="font-size: 25px; margin-right: 10px;"></i></h1>                            <h5 class="text-truncate m-0">Suporte ao cliente</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- features end -->
 
     <!-- pricing start -->
 
-    <div class="container-fluid bg-light pt-5 pb-4">
-        <div class="container py-5">
-            <div class="d-flex flex-column flex-center mb-5 text-center mb-5">
-                <h4 class="text-secondary mb-3">Planos</h4>
-                <h1 class="display-4 m-0">Escolha o <span class="text-primary">melhor preço</span> para você</h1>
-            </div>
-            <div class="row">
-                <!-- Plano Básico -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img src="imagens/img-price.jpg" class="card-img-top" alt="Plano Básico">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" 
-                                style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgba(0, 0, 0, 0.5);">
-                                <h3>Básico</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>59 
-                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
-                                </h1>
+    <section id="planos">
+        <div class="container-fluid bg-light pt-5 pb-4">
+            <div class="container py-5">
+                <div class="d-flex flex-column flex-center mb-5 text-center mb-5">
+                    <h4 class="text-secondary mb-3">Planos</h4>
+                    <h1 class="display-4 m-0">Escolha o <span class="text-primary">melhor preço</span> para você</h1>
+                </div>
+                <div class="row">
+                    <!-- Plano Básico -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img src="imagens/img-price.jpg" class="card-img-top" alt="Plano Básico">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                    style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgba(0, 0, 0, 0.5);">
+                                    <h3>Básico</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>59
+                                        <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
+                                    </h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Banho e tosa</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Banho e tosa</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Plano Intermediário -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img src="imagens/img-price-2.jpg" class="card-img-top" alt="Plano Intermediário">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" 
-                                style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgb(0, 0, 0, .5);">
-                                <h3>Intermediário</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>79 
-                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
-                                </h1>
+        
+                    <!-- Plano Intermediário -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img src="imagens/img-price-2.jpg" class="card-img-top" alt="Plano Intermediário">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                    style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgb(0, 0, 0, .5);">
+                                    <h3>Intermediário</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>79
+                                        <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
+                                    </h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Plano Premium -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img src="imagens/img-price-3.jpg" class="card-img-top" alt="Plano Premium">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" 
-                                style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgb(0, 0, 0, .5);">
-                                <h3>Premium</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>109 
-                                    <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
-                                </h1>
+        
+                    <!-- Plano Premium -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img src="imagens/img-price-3.jpg" class="card-img-top" alt="Plano Premium">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                    style="top: 0; left: 0; z-index: 1; color: rgb(255, 255, 255); background: rgb(0, 0, 0, .5);">
+                                    <h3>Premium</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>109
+                                        <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ dia</small>
+                                    </h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Vacinação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Medicina veterinária</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Vacinação</li>
+                                    <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Medicina veterinária</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
     <!-- pricing end -->
 
     <!-- blog start -->
 
-    <div class="container pt-5">
-        <div class="d-flex flex-column flex-center mb-5 text-center mb5">
-            <h4 class="text-secondary mb-3">Blog</h4>
-            <h1 class="display-4 m-0"><span class="text-primary">Últimas notícias </span> do blog</h1>
+    <section id="blog">
+        <div class="container pt-5">
+            <div class="d-flex flex-column flex-center mb-5 text-center mb5">
+                <h4 class="text-secondary mb-3">Blog</h4>
+                <h1 class="display-4 m-0"><span class="text-primary">Últimas notícias </span> do blog</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0-mb-2">
+                        <img src="imagens/blog-1.jpg" class="card-img-top" alt="">
+                        <div class="card-body bg-light p-4">
+                            <a href="#" style="color: black;">
+                                <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                            </a>
+                            <div class="d-flex mb-3">
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                            <a href="" class="font-weight-bold">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0-mb-2">
+                        <img src="imagens/blog-2.jpg" class="card-img-top" alt="">
+                        <div class="card-body bg-light p-4">
+                            <a href="#" style="color: black;">
+                                <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                            </a>
+                            <div class="d-flex mb-3">
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                            <a href="" class="font-weight-bold">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0-mb-2">
+                        <img src="imagens/blog-3.jpg" class="card-img-top" alt="">
+                        <div class="card-body bg-light p-4">
+                            <a href="#" style="color: black;">
+                                <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                            </a>
+                            <div class="d-flex mb-3">
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
+                                <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                            <a href="" class="font-weight-bold">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="row pb-3">
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0-mb-2">
-                    <img src="imagens/blog-1.jpg" class="card-img-top" alt="">
-                    <div class="card-body bg-light p-4">
-                        <a href="#" style="color: black;">
-                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
-                        </a>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
-                        <a href="" class="font-weight-bold">Leia mais</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0-mb-2">
-                    <img src="imagens/blog-2.jpg" class="card-img-top" alt="">
-                    <div class="card-body bg-light p-4">
-                        <a href="#" style="color: black;">
-                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
-                        </a>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
-                        <a href="" class="font-weight-bold">Leia mais</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0-mb-2">
-                    <img src="imagens/blog-3.jpg" class="card-img-top" alt="">
-                    <div class="card-body bg-light p-4">
-                        <a href="#" style="color: black;">
-                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
-                        </a>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
-                        <a href="" class="font-weight-bold">Leia mais</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+    </section>
 
     <!-- blog end -->
 
     <!-- client opinions start -->
-     <div class="container-fluid py-5 bg-light pt-5 pb-5" style="margin-bottom: -50px;">
-        <div class="container">
-            <div class="d-flex flex-column flex-center mb-5 text-center mb-5">
-                <h4 class="text-secondary mb-3">Opiniões</h4>
-                <h1 class="display-4 m-0"><span class="text-primary">O que dizem os nossos clientes</span></h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel client-carousel">
-                        <div class="client-item">
-                            <div class="client-img">
-                                <img class="img-fluid rounded-circle" src="imagens/pessoa-1.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
-                            </div>
-                            <div class="client-text bg-white text-center p-4">
-                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
-                                <p>☆☆☆☆</p>
-                                <h4>Mary Smith</h4>
-                            </div>
-                        </div>
-
-                        <div class="client-item">
-                            <div class="client-img">
-                                <img class="img-fluid rounded-circle" src="imagens/pessoa-2.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
-                            </div>
-                            <div class="client-text bg-white text-center p-4">
-                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
-                                <p>☆☆☆☆☆</p>
-                                <h4>John Doe</h4>
-                            </div>
-                        </div>
-
-                        <div class="client-item">
-                            <div class="client-img">
-                                <img class="img-fluid rounded-circle" src="imagens/pessoa-3.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
-                            </div>
-                            <div class="client-text bg-white text-center p-4">
-                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
-                                <p>☆☆☆☆☆</p>
-                                <h4>Anne Jones</h4>
-                            </div>
-                        </div>
-                    </div>
+    <section id="feedbacks">
+        <div class="container-fluid py-5 bg-light pt-5 pb-5" style="margin-bottom: -50px;">
+            <div class="container">
+                <div class="d-flex flex-column flex-center mb-5 text-center mb-5">
+                    <h4 class="text-secondary mb-3">Opiniões</h4>
+                    <h1 class="display-4 m-0"><span class="text-primary">O que dizem os nossos clientes</span></h1>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- client opinions end -->
-
-    <!-- footer start -->
-
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-6" style="margin: 0;">
-        <div class="row pt-5">
-            <div class="col-lg-4 col-md-12 mb-5" style="margin-top: 42px;">
-                <h1 class="mb-3 display-4 text-white"><span class="text-primary">Cantinho</span> dos Pets</h1>
-                <p class="m-2">Hospedagem para animais de estimação</p>
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-md-4 mb-5 px-md-5">
-                        <h5 class="text-primary mb-4">Fale conosco</h5>
-                        <p><i class="fa-solid fa-phone"></i> (01) 92345-6789</p>
-                        <p><i class="fa-solid fa-envelope"></i> cantinhodospets@email.com</p>
-                        <p><i class="fa-solid fa-location-dot"></i> Rua das Laranjas, 123, Cajueiro, PI-BR.</p>
-                        <div class="d-flex justify-content-start mt-4">
-                            <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5 px-md-5">
-                        <h5 class="text-primary mb-4">Links úteis</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Página inicial</a>
-                            <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Sobre nós</a>
-                            <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Nossos serviços</a>
-                            <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Nosso time</a>
-                            <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Contato</a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5 px-md-5" style="margin-left: -105px;">
-                        <h5 class="text-primary mb-4">Newsletter</h5>
-                        <p>Receba nossas novidades e promoções:</p>
-                        <div class="w-100">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-4" placeholder="Seu e-mail">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary btn-block p-2">Enviar</button>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="owl-carousel client-carousel">
+                            <div class="client-item">
+                                <div class="client-img">
+                                    <img class="img-fluid rounded-circle" src="imagens/pessoa-1.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                                </div>
+                                <div class="client-text bg-white text-center p-4">
+                                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                    <p>☆☆☆☆</p>
+                                    <h4>Mary Smith</h4>
+                                </div>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-img">
+                                    <img class="img-fluid rounded-circle" src="imagens/pessoa-2.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                                </div>
+                                <div class="client-text bg-white text-center p-4">
+                                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                    <p>☆☆☆☆☆</p>
+                                    <h4>John Doe</h4>
+                                </div>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-img">
+                                    <img class="img-fluid rounded-circle" src="imagens/pessoa-3.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                                </div>
+                                <div class="client-text bg-white text-center p-4">
+                                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                    <p>☆☆☆☆☆</p>
+                                    <h4>Anne Jones</h4>
                                 </div>
                             </div>
                         </div>
@@ -629,7 +564,59 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- client opinions end -->
+
+    <!-- footer start -->
+
+    <section id="contato">
+        <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-6" style="margin: 0;">
+            <div class="row pt-5">
+                <div class="col-lg-4 col-md-12 mb-5" style="margin-top: 42px;">
+                    <h1 class="mb-3 display-4 text-white"><span class="text-primary">Cantinho</span> dos Pets</h1>
+                    <p class="m-2">Hospedagem para animais de estimação</p>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 mb-5 px-md-5">
+                            <h5 class="text-primary mb-4">Fale conosco</h5>
+                            <p><i class="fa-solid fa-phone"></i> (01) 92345-6789</p>
+                            <p><i class="fa-solid fa-envelope"></i> cantinhodospets@email.com</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Rua das Laranjas, 123, Cajueiro, PI-BR.</p>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 px-md-5">
+                            <h5 class="text-primary mb-4">Links úteis</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Página inicial</a>
+                                <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Sobre nós</a>
+                                <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Nossos serviços</a>
+                                <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Nosso time</a>
+                                <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Contato</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 px-md-5" style="margin-left: -105px;">
+                            <h5 class="text-primary mb-4">Newsletter</h5>
+                            <p>Receba nossas novidades e promoções:</p>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-4" placeholder="Seu e-mail">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary btn-block p-2">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="container-fluid bg-light text-black py-4 px-sm-3 px-md-5">
         <p class="m-0 text-center">Made with &lt;3 by <a href="#">nome</a></p>
