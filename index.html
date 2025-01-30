@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantinho dos Pets</title>
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Bootstrap 4 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
@@ -25,6 +30,51 @@
 
         i.fa-regular:hover, i.fa-solid:hover {
             color: #007bff; /* Cor de hover */
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex !important;
+            justify-content: space-between;
+        }
+
+        .owl-nav button {
+            /* background: rgba(0, 0, 0, 0.5) !important; */
+            color: rgb(0, 0, 0) !important;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            position: absolute;
+        }
+
+        .owl-nav .owl-prev {
+            left: -90px; /* Move a seta esquerda para fora */
+        }
+
+        .owl-nav .owl-next {
+            right: -90px; /* Move a seta direita para fora */
+        }
+
+        .client-img {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            margin: 0 auto; /* Garante centralização */
+            width: 100%;
+        }
+
+        .client-img img {
+            display: block;
+            margin: 0 auto;
         }
 
     </style>
@@ -324,17 +374,17 @@
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Suporte ao cliente 24h</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
                                 <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Banho e tosa</li>
                                 <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
                                 <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Adquirir</a>
+                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -355,17 +405,17 @@
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Suporte ao cliente 24h</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Banho e tosa</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
                                 <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Vacinação</li>
                                 <li class="list-group-item p-2"><i class="fa-solid fa-times text-danger mr-2"></i>Medicina veterinária</li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Adquirir</a>
+                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -386,17 +436,17 @@
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Hospedagem</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Alimentação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Serviço de emergência</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Suporte ao cliente 24h</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Banho e tosa</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Vacinação</li>
-                                <li class="list-group-item p-2"><i class="fa-solid fa-check text-secondary mr-2"></i>Medicina veterinária</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Hospedagem</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Alimentação</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Serviço de emergência</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Suporte ao cliente 24h</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Banho e tosa</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Vacinação</li>
+                                <li class="list-group-item p-2"><i class="fa-solid fa-check mr-2" style="color: #28a745"></i>Medicina veterinária</li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="#" class="btn btn-primary btn-block p-3">Adquirir</a>
+                            <a href="#" class="btn btn-primary btn-block p-3">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -419,12 +469,14 @@
                 <div class="card border-0-mb-2">
                     <img src="imagens/blog-1.jpg" class="card-img-top" alt="">
                     <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        <a href="#" style="color: black;">
+                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        </a>
                         <div class="d-flex mb-3">
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
                         <a href="" class="font-weight-bold">Leia mais</a>
 
                     </div>
@@ -437,12 +489,14 @@
                 <div class="card border-0-mb-2">
                     <img src="imagens/blog-2.jpg" class="card-img-top" alt="">
                     <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        <a href="#" style="color: black;">
+                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        </a>
                         <div class="d-flex mb-3">
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
                         <a href="" class="font-weight-bold">Leia mais</a>
 
                     </div>
@@ -455,12 +509,14 @@
                 <div class="card border-0-mb-2">
                     <img src="imagens/blog-3.jpg" class="card-img-top" alt="">
                     <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        <a href="#" style="color: black;">
+                            <h4 class="card-title text-truncate">Lorem ipsum dolor sit amet consectetur</h4>
+                        </a>
                         <div class="d-flex mb-3">
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Admin</small>
                             <small class="mr-2"><i class="fa-solid fa-user text-muted"></i> Web Design</small>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos quam corporis est hic at dicta natus nisi, corrupti aperiam placeat, doloribus assumenda dolorem eius tempore cupiditate.</p>
                         <a href="" class="font-weight-bold">Leia mais</a>
 
                     </div>
@@ -475,13 +531,63 @@
 
     <!-- blog end -->
 
+    <!-- client opinions start -->
+     <div class="container-fluid py-5 bg-light pt-5 pb-5" style="margin-bottom: -50px;">
+        <div class="container">
+            <div class="d-flex flex-column flex-center mb-5 text-center mb-5">
+                <h4 class="text-secondary mb-3">Opiniões</h4>
+                <h1 class="display-4 m-0"><span class="text-primary">O que dizem os nossos clientes</span></h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel client-carousel">
+                        <div class="client-item">
+                            <div class="client-img">
+                                <img class="img-fluid rounded-circle" src="imagens/pessoa-1.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                            </div>
+                            <div class="client-text bg-white text-center p-4">
+                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                <p>☆☆☆☆</p>
+                                <h4>Mary Smith</h4>
+                            </div>
+                        </div>
+
+                        <div class="client-item">
+                            <div class="client-img">
+                                <img class="img-fluid rounded-circle" src="imagens/pessoa-2.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                            </div>
+                            <div class="client-text bg-white text-center p-4">
+                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                <p>☆☆☆☆☆</p>
+                                <h4>John Doe</h4>
+                            </div>
+                        </div>
+
+                        <div class="client-item">
+                            <div class="client-img">
+                                <img class="img-fluid rounded-circle" src="imagens/pessoa-3.jpg" alt="" style="width: 200px; height: 200px; margin-bottom: -20px;">
+                            </div>
+                            <div class="client-text bg-white text-center p-4">
+                                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, recusandae.</p>
+                                <p>☆☆☆☆☆</p>
+                                <h4>Anne Jones</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- client opinions end -->
+
     <!-- footer start -->
 
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-6">
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-6" style="margin: 0;">
         <div class="row pt-5">
-            <div class="col-lg-4 col-md-12 mb-5">
+            <div class="col-lg-4 col-md-12 mb-5" style="margin-top: 42px;">
                 <h1 class="mb-3 display-4 text-white"><span class="text-primary">Cantinho</span> dos Pets</h1>
-                <p class="m-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, impedit.</p>
+                <p class="m-2">Hospedagem para animais de estimação</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
@@ -506,12 +612,27 @@
                             <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Nosso time</a>
                             <a href="" class="text-white mb-2"><i class="fa-solid fa-angle-right"></i> Contato</a>
                         </div>
+                    </div>
 
+                    <div class="col-md-4 mb-5 px-md-5" style="margin-left: -105px;">
+                        <h5 class="text-primary mb-4">Newsletter</h5>
+                        <p>Receba nossas novidades e promoções:</p>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-4" placeholder="Seu e-mail">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary btn-block p-2">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container-fluid bg-light text-black py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">Made with &lt;3 by <a href="#">nome</a></p>
     </div>
 
     <!-- footer end -->
@@ -519,6 +640,28 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery e Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".client-carousel").owlCarousel({
+                loop: true,  // Faz o carrossel rodar em loop infinito
+                margin: 20,  // Espaço entre os itens
+                nav: true,  // Ativa botões de navegação
+                dots: true, // Mostra os indicadores de página
+                autoplay: false, // Desativa rolagem automática
+                navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"], // Ícones dos botões
+                responsive:{
+                    0:{ items:1, nav: true }, // 1 item visível em telas pequenas
+                    768:{ items:2, nav: true }, // 2 itens visíveis em tablets
+                    1024:{ items:3, nav: true } // 3 itens visíveis em telas maiores
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
