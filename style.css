@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+        
+        body {
+            font-family: 'Playpen Sans', sans-serif;
+        }
+
+        /* hover dos ícones */
+        i.fa-regular, i.fa-solid {
+            transition: color 0.3s ease;
+        }
+
+        i.fa-regular:hover, i.fa-solid:hover {
+            color: #007bff; /* Cor de hover */
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex !important;
+            justify-content: space-between;
+        }
+
+        .owl-nav button {
+            /* background: rgba(0, 0, 0, 0.5) !important; */
+            color: rgb(0, 0, 0) !important;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            position: absolute;
+        }
+
+        .owl-nav .owl-prev {
+            left: -90px; /* Move a seta esquerda para fora */
+        }
+
+        .owl-nav .owl-next {
+            right: -90px; /* Move a seta direita para fora */
+        }
+
+        .client-img {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            margin: 0 auto; /* Garante centralização */
+            width: 100%;
+        }
+
+        .client-img img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .bg-primary {
+            background-color: #8ab2dd !important;
+        }
+
+        .navbar .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            border-radius: 3px;
+            background: #8ab2dd;
+            left: 50%;
+            bottom: 5px;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        #home {
+            background: url('imagens/cat-8.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        p {
+            font-family: Nunito Sans, sans-serif;
+        }
+
+        section {
+            scroll-margin-top: 30px; /* espaço entre a navbar e o conteúdo */
+        }
