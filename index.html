@@ -657,23 +657,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $(".client-carousel").owlCarousel({
-                loop: true,  // Faz o carrossel rodar em loop infinito
-                margin: 70,  // Espaço entre os itens
-                nav: true,  // Ativa botões de navegação
-                dots: true, // Mostra os indicadores de página
-                autoplay: false, // Desativa rolagem automática
-                navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"], // Ícones dos botões
-                responsive:{
-                    0:{ items:1, nav: true }, // 1 item visível em telas pequenas
-                    768:{ items:2, nav: true }, // 2 itens visíveis em tablets
-                    1024:{ items:3, nav: true } // 3 itens visíveis em telas maiores
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
